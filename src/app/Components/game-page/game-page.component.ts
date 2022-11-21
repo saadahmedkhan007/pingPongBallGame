@@ -88,6 +88,7 @@ export class GamePageComponent implements OnInit {
       if (parseInt(paddle_1.css('left')) > 0) {
         paddle_1.css('left', parseInt(paddle_1.css('left')) - 15);
         move_left_p1 = requestAnimationFrame(left_p1);
+        console.log(move_left_p1);
       }
     }
 
@@ -95,6 +96,7 @@ export class GamePageComponent implements OnInit {
       if (parseInt(paddle_1.css('left')) < container_width - paddle_width) {
         paddle_1.css('left', parseInt(paddle_1.css('left')) + 15);
         move_right_p1 = requestAnimationFrame(right_p1);
+        console.log(move_right_p1);
       }
     }
 

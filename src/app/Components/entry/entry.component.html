@@ -1,9 +1,6 @@
-<div class="parent">
+<div style="position: relative;display: flex;" class="parent">
   <h1 class="heading">PING-PONG SPRINT</h1>
-  <video
-    id="vid"
-    [autoplay]="true"
-    [loop]="true"
-    src="../../../assets/Atoms - 13232.mp4"
-  ></video>
+  <img class="img" src="{{imageQR}}" alt="">
+  <h4 class="roomID" style="z-index: 9999;color:white;margin-top: 100px;">Room ID : {{roomId}}</h4>
+  <video id="vid" [autoplay]="true" [loop]="true" src="../../../assets/video.mp4"></video>
 </div>

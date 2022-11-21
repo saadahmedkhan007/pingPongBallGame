@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as QRCode from 'qrcode';
+
 @Component({
   selector: 'app-entry',
   templateUrl: './entry.component.html',
@@ -6,5 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryComponent implements OnInit {
   constructor() {}
-  ngOnInit(): void {}
+  imageQR: string = '';
+  roomId: any;
+  ngOnInit(): void {
+    this.generateQR();
+  }
+  private _generateQR = async () => {
+    const text = 'moin';
+    this.roomId = text;
+
+    try {
+      this.imageQR = await QRCode.toDataURL(text);
+      console.log(this.imageQR);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  public get generateQR() {
+    return this._generateQR;
+  }
+  public set generateQR(value) {
+    this._generateQR = value;
+  }
 }

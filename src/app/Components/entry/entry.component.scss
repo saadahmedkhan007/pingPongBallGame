@@ -1,9 +1,9 @@
-.parent{
+.parent {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
-#vid{
+#vid {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   object-fit: fill;
 }
 
-.heading{
+.heading {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -22,69 +22,99 @@
   width: 100%;
 }
 #container {
-		position:relative;
-    height: 100vh;
-    // width: 100vw;
-		// margin-left:20%;
-		background-color:black;
-		// margin-top:100px;
-		overflow:hidden;
-		border:3px solid white;
-    display: flex;
+  position: relative;
+  height: 100vh;
+  // width: 100vw;
+  // margin-left:20%;
+  background-color: black;
+  // margin-top:100px;
+  overflow: hidden;
+  border: 3px solid white;
+  display: flex;
 }
 
 #ball {
-	position:absolute;
-	height:20px;
-	width:20px;
-	background-color:white;
-	top:30%;
-	left:50%;
-	border-radius:10px;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  top: 30%;
+  left: 50%;
+  border-radius: 10px;
 }
 
 .paddle {
-	position:absolute;
-	height:20px;
-	width:150px;
-	background-color:white;
-	left:40%;
+  position: absolute;
+  height: 20px;
+  width: 150px;
+  background-color: white;
+  left: 40%;
 }
 
 #paddle_1 {
-	bottom:0;
-	background-color: red;
-	text-align: center;
-	font-weight: bold;
-	color:white;
+  bottom: 0;
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 }
 
 #paddle_2 {
-	top:0;
-	background-color: blue;
-	text-align: center;
-	font-weight: bold;
-	color:white;
+  top: 0;
+  background-color: blue;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 }
 
 #restart_div {
-	position:absolute;
-	height:100%;
-	width:100%;
-	background-color:gray;
-	color:black;
-	font-family:sans-serif;
-	font-size:200px;
-	text-align:center;
-	display:none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  color: black;
+  font-family: sans-serif;
+  font-size: 200px;
+  text-align: center;
+  display: none;
 }
 
 #restart {
-	border:groove;
-	border-radius: 25px;
-	padding:25px;
-	color:white;
-	background-color: green;
-	font-size:30px;
+  border: groove;
+  border-radius: 25px;
+  padding: 25px;
+  color: white;
+  background-color: green;
+  font-size: 30px;
 }
 
+.img {
+  background-color: #aa21ff;
+  width: 250px;
+  min-height: 250px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.roomID {
+  height: 50px;
+  background-color: gray;
+  min-height: 50px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60%;
+  z-index: 99;
+  border-radius: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
