@@ -90,14 +90,14 @@
 
 .img {
   background-color: #aa21ff;
-  width: 250px;
-  min-height: 250px;
+  width: 200px;
+  min-height: 200px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 30%;
   z-index: 99;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -113,6 +113,21 @@
   align-items: center;
   position: absolute;
   top: 60%;
+  z-index: 99;
+  border-radius: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.roomIDs {
+  background-color: gray;
+  min-height: 50px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 75%;
   z-index: 99;
   border-radius: 25px;
   left: 50%;

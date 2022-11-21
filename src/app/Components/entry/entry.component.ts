@@ -14,7 +14,7 @@ export class EntryComponent implements OnInit {
     this.generateQR();
   }
   private _generateQR = async () => {
-    const text = 'moin';
+    const text = 'hey google';
     this.roomId = text;
 
     try {
