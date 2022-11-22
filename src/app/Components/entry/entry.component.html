@@ -1,16 +1,22 @@
 <div style="position: relative;display: flex;" class="parent">
   <h1 class="heading">PING-PONG SPRINT</h1>
-  <img class="img" src="{{imageQR}}" alt="">
+  <div *ngIf="!browserdet" class="">
+    <img class="img" src="{{imageQR}}" alt="">
+  </div>
   <!-- <h4 class="roomID" style="z-index: 9999;color:white;margin-top: 100px;">Room ID : {{roomId}}</h4> -->
   <video id="vid" [autoplay]="true" [loop]="true" src="../../../assets/video.mp4"></video>
   <!-- For camera -->
-  <div class="roomIDs">
-    <ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
-    <!-- data  --><br>
-    <p style="width:200px ;" class="data">{{ action.data | async }}</p>
+  <div *ngIf="browserdet" class="roomIDs">
+    <!-- For camera -->
+    <ngx-scanner-qrcode id="scanner" #action="scanner"></ngx-scanner-qrcode>
+    <!-- data  -->
+    <p class="data">{{ action.data | async }}</p>
     <!-- Loading -->
-    <h2 *ngIf="action.isLoading">⌛ Loading...</h2>
+    <p *ngIf="action.isLoading">⌛ Loading...</p>
     <!-- start -->
-    <button class="btn btn-success" (click)="action.start()">{{action.isStart ? 'Stop' : 'Start'}}</button>
+    <br>
+    <div>
+      <button (click)="action.start()">{{action.isStart ? 'Stop' : 'Start'}}</button>
+    </div>
   </div>
 </div>

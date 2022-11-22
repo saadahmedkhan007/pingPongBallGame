@@ -9,7 +9,7 @@ import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 @NgModule({
   declarations: [AppComponent, EntryComponent, GamePageComponent],
   imports: [BrowserModule, AppRoutingModule, NgxScannerQrcodeModule],
-  providers: [],
+  providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
