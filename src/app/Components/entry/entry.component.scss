@@ -124,7 +124,6 @@
   width: 210px;
   height: 210px;
   padding: 5px;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -133,17 +132,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#scanner {
-  background-color: black;
-  width: 200px;
-  min-height: 200px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  z-index: 99;
-  left: 50%;
-  transform: translate(-50%, -50%);
+button {
+  border: 1px solid;
+  width: 100px;
+  height: 36px;
+  color: white;
+  background: transparent;
+}
+
+canvas {
+  width: 150px !important;
+  height: 200px !important;
 }

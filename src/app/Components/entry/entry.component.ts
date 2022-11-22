@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import * as QRCode from 'qrcode';
 
 @Component({
@@ -7,13 +7,19 @@ import * as QRCode from 'qrcode';
   styleUrls: ['./entry.component.scss'],
 })
 export class EntryComponent implements OnInit {
-  @Input('scanner') action: any;
-  browserdet = false;
+  @ViewChild('action') action?: ElementRef<any>;
+  private _browserdet = false;
+  public get browserdet() {
+    return this._browserdet;
+  }
+  public set browserdet(value) {
+    this._browserdet = value;
+  }
   constructor(private window: Window) {}
   imageQR: string = '';
   roomId: any;
   ngOnInit(): void {
-    console.log(this.action);
+    console.log(this.action?.nativeElement);
 
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
